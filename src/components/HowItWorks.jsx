@@ -12,7 +12,7 @@ const steps = [
     icon: ImageIcon,
     title: 'Choose a tool',
     description:
-      'Convert a format, extend the canvas, remove a background, or enhance resolution.',
+      'Convert an image format or remove a background.',
   },
   {
     icon: UploadIcon,
@@ -24,7 +24,7 @@ const steps = [
     icon: SparklesIcon,
     title: 'Run the process',
     description:
-      'Local tools use browser AI. Background extension uses the free Stable Horde network only when you start it.',
+      'Everything runs in your browser, so your image never leaves your device.',
   },
   {
     icon: DownloadIcon,
@@ -46,7 +46,7 @@ export default function HowItWorks() {
             How It Works
           </span>
           <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            Four tools. One simple flow.
+            Two tools. One simple flow.
           </h2>
           <p className="mt-3 text-base leading-relaxed text-slate-500 sm:text-lg">
             No accounts or installs — pick a tool and get a result in minutes.

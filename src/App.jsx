@@ -4,25 +4,19 @@ import Navbar from './components/Navbar'
 import { useRoute } from './lib/router'
 import AboutPage from './pages/AboutPage'
 import ConverterPage from './pages/ConverterPage'
-import EnhancerPage from './pages/EnhancerPage'
-import ExtendPage from './pages/ExtendPage'
 import HomePage from './pages/HomePage'
 import RemoverPage from './pages/RemoverPage'
 
 const pageTitles = {
-  home: 'Image Studio — AI Image Converter, Remover, Enhancer & Extension',
+  home: 'Image Studio — Image Converter & Background Remover',
   converter: 'Image Converter — Image Studio',
-  extend: 'AI Background Extension — Image Studio',
   removeBackground: 'Background Remover — Image Studio',
-  enhance: 'AI HD Enhancer — Image Studio',
   about: 'About — Image Studio',
 }
 
 function CurrentPage({ route }) {
   if (route === 'converter') return <ConverterPage />
-  if (route === 'extend') return <ExtendPage />
   if (route === 'removeBackground') return <RemoverPage />
-  if (route === 'enhance') return <EnhancerPage />
   if (route === 'about') return <AboutPage />
   return <HomePage />
 }

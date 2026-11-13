@@ -4,11 +4,9 @@ import {
   BoltIcon,
   CloudIcon,
   EraserIcon,
-  ExpandIcon,
   ImageIcon,
   ShieldIcon,
   SparklesIcon,
-  WandIcon,
 } from '../components/ui/Icons'
 import { ROUTES } from '../lib/router'
 
@@ -27,19 +25,6 @@ const tools = [
     features: ['9 input formats', 'Transparency aware', 'Batch-free simplicity'],
   },
   {
-    id: 'extend',
-    title: 'AI Background Extension',
-    description:
-      'Expand the canvas in any direction with real AI outpainting. Pick a ratio, describe the scene, and choose a style.',
-    href: ROUTES.extend,
-    icon: ExpandIcon,
-    badge: 'Free AI cloud',
-    external: true,
-    accent: 'from-violet-500 to-purple-600',
-    soft: 'bg-violet-50 text-violet-600',
-    features: ['All aspect ratios', 'Prompt + styles', 'Solid or image fill'],
-  },
-  {
     id: 'remove-background',
     title: 'Background Remover',
     description:
@@ -52,36 +37,18 @@ const tools = [
     soft: 'bg-fuchsia-50 text-fuchsia-600',
     features: ['Hair-level edges', 'Transparent PNG', 'Custom backdrops'],
   },
-  {
-    id: 'enhance',
-    title: 'AI HD Enhancer',
-    description:
-      'Recover detail and sharpen images with Real-ESRGAN super-resolution, running privately in your browser.',
-    href: ROUTES.enhance,
-    icon: WandIcon,
-    badge: 'On-device',
-    external: false,
-    accent: 'from-amber-500 to-orange-600',
-    soft: 'bg-amber-50 text-amber-600',
-    features: ['2x or 4x upscale', 'Before/after slider', 'Transparent-aware'],
-  },
 ]
 
 const highlights = [
   {
     icon: ShieldIcon,
     title: 'Private where it matters',
-    description: 'Conversion, removal, and enhancement stay on your device.',
+    description: 'Conversion and background removal stay on your device.',
   },
   {
     icon: BoltIcon,
     title: 'Real browser AI',
     description: 'ONNX and WASM models run directly in the page.',
-  },
-  {
-    icon: CloudIcon,
-    title: 'Free extension AI',
-    description: 'Outpainting uses the free Stable Horde network.',
   },
 ]
 
@@ -115,9 +82,8 @@ export default function HomePage() {
             </h1>
 
             <p className="mx-auto mt-5 max-w-2xl animate-fade-up text-base leading-relaxed text-slate-600 [animation-delay:160ms] sm:text-lg">
-              Convert formats, extend backgrounds, remove backgrounds, and
-              upscale in HD. Four focused tools, no accounts, and no software
-              installs.
+              Convert image formats and remove backgrounds. Two focused tools,
+              no accounts, and no software installs.
             </p>
           </div>
 
@@ -180,7 +146,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <ul className="mx-auto mt-8 grid max-w-5xl animate-fade-up gap-3 [animation-delay:320ms] sm:grid-cols-3">
+          <ul className="mx-auto mt-8 grid max-w-5xl animate-fade-up gap-3 [animation-delay:320ms] sm:grid-cols-2">
             {highlights.map(({ icon: Icon, title, description }) => (
               <li
                 key={title}

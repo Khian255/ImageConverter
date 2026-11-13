@@ -1,4 +1,4 @@
-import { CloudIcon, LogoIcon, ShieldIcon } from './ui/Icons'
+import { LogoIcon, ShieldIcon } from './ui/Icons'
 import { NAV_LINKS, ROUTES } from '../lib/router'
 
 const currentYear = new Date().getFullYear()
@@ -50,11 +50,7 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-1.5 sm:flex-row sm:gap-4">
             <p className="flex items-center gap-1.5">
               <ShieldIcon className="size-3.5" />
-              Converter, remover, and enhancer run locally.
-            </p>
-            <p className="flex items-center gap-1.5">
-              <CloudIcon className="size-3.5" />
-              Extension uses the free Stable Horde network.
+              Converter and background remover run locally.
             </p>
           </div>
           <p>

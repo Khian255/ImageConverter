@@ -1,7 +1,6 @@
 import {
   ArrowRightIcon,
   BoltIcon,
-  CloudIcon,
   ShieldIcon,
   SparklesIcon,
 } from './ui/Icons'
@@ -12,19 +11,13 @@ const features = [
     icon: ShieldIcon,
     title: 'Local by default',
     description:
-      'Format conversion, background removal, and HD enhancement run inside your browser. Images are not uploaded.',
+      'Format conversion and background removal run inside your browser. Images are not uploaded.',
   },
   {
     icon: SparklesIcon,
     title: 'Real AI, not filters',
     description:
-      'The tools use segmentation and super-resolution models. Results are generated, not faked with CSS effects.',
-  },
-  {
-    icon: CloudIcon,
-    title: 'Transparent about the cloud',
-    description:
-      'AI background extension uses the free Stable Horde network. You are told before your image leaves the device.',
+      'The background remover uses a segmentation model. Results are generated, not faked with CSS effects.',
   },
   {
     icon: BoltIcon,
@@ -53,16 +46,9 @@ export default function About() {
                 A complete image studio that respects your files
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Image Studio brings format conversion, generative fill,
-                background removal, and super-resolution into one clean
-                workspace. The core tools run locally in your browser, so your
-                photos stay on your device.
-              </p>
-              <p className="mt-3 text-base leading-relaxed text-slate-600">
-                Background extension is the one cloud feature. It uses Stable
-                Horde, a free public AI network, and only sends an image when
-                you explicitly start an AI outpaint. No account or API key is
-                required.
+                Image Studio brings format conversion and background
+                removal into one clean workspace. Both tools run locally in
+                your browser, so your photos stay on your device.
               </p>
               <a
                 href={ROUTES.home}

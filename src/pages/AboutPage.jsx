@@ -1,7 +1,6 @@
 import About from '../components/About'
 import PageHeader from '../components/PageHeader'
 import {
-  CloudIcon,
   ImageIcon,
   ShieldIcon,
   SparklesIcon,
@@ -12,19 +11,13 @@ const details = [
     icon: SparklesIcon,
     title: 'How the AI works',
     description:
-      'Background removal uses U2-Netp segmentation in the browser. HD enhancement uses Real-ESRGAN with ONNX Runtime Web. Background extension uses Stable Horde.',
+      'Background removal uses U2-Netp segmentation in the browser.',
   },
   {
     icon: ShieldIcon,
     title: 'What stays on your device',
     description:
-      'Conversion, background removal, and enhancement never upload your image. Only the necessary model files and browser runtimes are downloaded.',
-  },
-  {
-    icon: CloudIcon,
-    title: 'When the cloud is used',
-    description:
-      'AI outpainting sends your image to Stable Horde when you press Extend with AI, and free jobs may wait in a public queue. Solid color and custom image extension are processed locally.',
+      'Conversion and background removal never upload your image. Only the necessary model files and browser runtimes are downloaded.',
   },
 ]
 
@@ -41,7 +34,7 @@ export default function AboutPage() {
       <About />
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           {details.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
@@ -67,7 +60,6 @@ export default function AboutPage() {
             <li>GIF export converts the first frame, not an animation.</li>
             <li>BMP does not support transparency, so transparent areas become white.</li>
             <li>ICO icons are resized to fit within 256 × 256 px.</li>
-            <li>AI outpainting renders at up to 1024 px on the longest edge, then composites your original pixels back into the scene.</li>
           </ul>
         </div>
       </section>
